@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>פרמה ושמחון – Tu BeLove Celebration</title>
-  <!-- Open Graph – תצוגה מקדימה בווטסאפ / פייסבוק -->
-  <meta property="og:title" content="פרמה ושמחון – Tu BeLove Celebration 🌕" />
-  <meta property="og:description" content="מסיבת טו באב וטקס ההתקדשות של פרמה ושמחון · 29 ביולי 2026 · מושב בית אלעזרי" />
+  <title>Prema & Simhon – Tu BeLove Celebration</title>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Prema & Simhon – Tu BeLove Celebration 🌕" />
+  <meta property="og:description" content="Tu B'Av Ceremony & Celebration · July 29, 2026 · Moshav Beit Elazari, Israel" />
   <meta property="og:image" content="https://simhond.github.io/2-be-love-celebration/image-invite.jpg" />
-  <meta property="og:url" content="https://simhond.github.io/2-be-love-celebration/" />
+  <meta property="og:url" content="https://simhond.github.io/2-be-love-celebration/index-en.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:locale" content="he_IL" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Heebo:wght@300;400;600&display=swap" rel="stylesheet" />
@@ -40,7 +39,7 @@
       top: 0; left: 0; right: 0;
       z-index: 100;
       display: flex;
-      justify-content: flex-start;
+      justify-content: flex-end;
       padding: 0.5rem 1.2rem;
       background: rgba(26, 18, 8, 0.72);
       backdrop-filter: blur(6px);
@@ -120,10 +119,6 @@
       color: var(--gold-light);
       font-size: 1.35rem;
       letter-spacing: 0.08em;
-    }
-
-    .hero-scroll {
-      display: none;
     }
 
     /* ── SECTIONS ── */
@@ -219,7 +214,7 @@
       .gallery-strip img { height: 220px; }
     }
 
-    /* ── DIRECTIONS ── */
+    /* ── NAV BUTTONS ── */
     .nav-buttons {
       display: flex;
       gap: 1rem;
@@ -241,19 +236,9 @@
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.18); }
-
-    .btn-google {
-      background: #4285F4;
-      color: #fff;
-    }
-    .btn-waze {
-      background: #33ccff;
-      color: #1a1a2e;
-    }
-    .btn-docs {
-      background: var(--gold);
-      color: var(--dark);
-    }
+    .btn-google { background: #4285F4; color: #fff; }
+    .btn-waze { background: #33ccff; color: #1a1a2e; }
+    .btn-docs { background: var(--gold); color: var(--dark); }
 
     .address-box {
       background: #fff;
@@ -264,9 +249,8 @@
       font-size: 1.05rem;
       margin-bottom: 1.5rem;
     }
-    .address-box strong { color: var(--dark); }
 
-    /* ── TIME ── */
+    /* ── TIME CARDS ── */
     .time-cards {
       display: flex;
       gap: 1.2rem;
@@ -309,8 +293,7 @@
       margin-top: 1rem;
     }
     .camping-list li {
-      padding: 0.6rem 0;
-      padding-right: 1.8rem;
+      padding: 0.6rem 0 0.6rem 1.8rem;
       position: relative;
       border-bottom: 1px solid #e8ddd0;
     }
@@ -318,21 +301,14 @@
     .camping-list li::before {
       content: '🌿';
       position: absolute;
-      right: 0;
+      left: 0;
       top: 0.6rem;
     }
 
     /* ── FOOD ── */
     .food-section { background: #f7f2ea; }
-    .food-cta {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .food-cta p {
-      color: #666;
-      font-size: 0.95rem;
-      margin-top: 0.8rem;
-    }
+    .food-cta { text-align: center; margin-top: 2rem; }
+    .food-cta p { color: #666; font-size: 0.95rem; margin-top: 0.8rem; }
 
     /* ── FOOTER ── */
     footer {
@@ -358,7 +334,7 @@
     .lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 6px; }
     .lightbox-close {
       position: absolute;
-      top: 1rem; left: 1rem;
+      top: 1rem; right: 1rem;
       color: #fff; font-size: 2rem;
       cursor: pointer; background: none; border: none;
     }
@@ -368,8 +344,8 @@
 
 <!-- ── LANG SWITCHER ── -->
 <div class="lang-bar">
-  <a href="index.html" class="lang-btn active">עברית 🇮🇱</a>
-  <a href="index-en.html" class="lang-btn">English 🇬🇧</a>
+  <a href="index.html" class="lang-btn">עברית 🇮🇱</a>
+  <a href="index-en.html" class="lang-btn active">English 🇬🇧</a>
 </div>
 
 <!-- ── HERO ── -->
@@ -377,56 +353,56 @@
   <div class="hero-bg"></div>
   <div class="hero-content">
     <p class="hero-subtitle">Tu BeLove Celebration</p>
-    <h1>פרמה <span>&</span> שמחון</h1>
-    <p class="hero-date">29 ביולי 2026 &nbsp;|&nbsp; ט"ו באב תשפ"ו &nbsp;|&nbsp; מושב בית אלעזרי</p>
+    <h1>Prema <span>&</span> Simhon</h1>
+    <p class="hero-date">July 29, 2026 &nbsp;|&nbsp; Tu B'Av &nbsp;|&nbsp; Moshav Beit Elazari</p>
   </div>
 </div>
 
 <!-- ── WELCOME ── -->
 <section id="welcome">
   <span class="section-icon">🌿</span>
-  <h2>ברוכים הבאים למסיבת טו באב וטקס ההתקדשות של פרמה ושמחון</h2>
+  <h2>Welcome to the Tu B'Av Celebration & Sacred Union of Prema and Simhon</h2>
 
   <p style="font-size:1.12rem; text-align:center; line-height:1.9;">
-    אנחנו שמחים ומתרגשים להזמין אתכם – אנשים יקרים, קרובים ללב –
-    לחגוג איתנו את האהבה שלנו, את החיים, ואת הרגע הזה.
+    We are deeply happy and excited to invite you — our beloved friends and family —
+    to celebrate our love, our lives, and this magical moment together.
   </p>
 
-  <!-- תמונה ראשונה -->
   <div class="inline-photo">
-    <img src="images/PXL_20250919_130013649.MP.jpg" alt="פרמה ושמחון" loading="lazy" />
+    <img src="images/PXL_20250919_130013649.MP.jpg" alt="Prema and Simhon" loading="lazy" />
   </div>
 
   <p>
-    הערב יתקיים <strong>תחת כיפת השמיים הפתוחה</strong>,
-    ביער של עצי אקליפטוס, זית ואלון עתיקים –
-    מקום שמרגיש כמו אגדה, שקט ועוצמתי.
-    האדמה תחת רגלינו, הכוכבים מעלינו, והאש שתבעיר את הלילה.
+    The evening will take place <strong>under the open sky</strong>,
+    in a forest of ancient eucalyptus, olive and oak trees —
+    a place that feels like a fairytale, peaceful and powerful.
+    The earth beneath our feet, the stars above us,
+    and a fire that will light up the night.
   </p>
 
   <p>
-    המסיבה היא <strong>פוטלאק</strong> – כל אחד מביא משהו מהלב,
-    ביחד אנחנו יוצרים סעודה של שמחה.
-    יהיה <strong>טקס קידוש לאהבה שלנו</strong>, ואחריו – ריקודים, מעגל נגינה,
-    ברכות ומוסיקה חיה מסביב לאש עד שהלילה יחליט להיגמר.
+    The celebration is a <strong>potluck</strong> — everyone brings something from the heart,
+    and together we create a feast of joy.
+    There will be a <strong>sacred ceremony celebrating our union</strong>,
+    followed by dancing, a music circle, blessings and live music around the fire
+    until the night decides it's time to rest.
   </p>
 
-  <!-- תמונה שנייה -->
   <div class="inline-photo">
-    <img src="images/PXL_20250919_150347463.MP.jpg" alt="רגעים שלנו" loading="lazy" />
+    <img src="images/PXL_20250919_150347463.MP.jpg" alt="Our moments" loading="lazy" />
   </div>
 
   <p>
-    אנחנו מחכים לחגוג איתכם – לשיר, לרקוד, לאכול, לאהוב ולהיות יחד.
-    הערב הזה שייך לכולנו. 🌕
+    We can't wait to celebrate with you — to sing, to dance, to eat, to love and to be together.
+    This evening belongs to all of us. 🌕
   </p>
 </section>
 
-<!-- תמונות אמצע -->
+<!-- PHOTO STRIP -->
 <div class="gallery-strip">
-  <img src="images/PXL_20251213_072956216.MP.jpg" alt="תמונה 3" loading="lazy" />
-  <img src="images/PXL_20251219_132317859.MP.jpg" alt="תמונה 4" loading="lazy" />
-  <img src="images/PXL_20251219_132321304.MP.jpg" alt="תמונה 5" loading="lazy" />
+  <img src="images/PXL_20251213_072956216.MP.jpg" alt="Photo 3" loading="lazy" />
+  <img src="images/PXL_20251219_132317859.MP.jpg" alt="Photo 4" loading="lazy" />
+  <img src="images/PXL_20251219_132321304.MP.jpg" alt="Photo 5" loading="lazy" />
 </div>
 
 <hr class="section-divider" />
@@ -434,34 +410,33 @@
 <!-- ── TIMING ── -->
 <section id="timing">
   <span class="section-icon">🌅</span>
-  <h2>מתי מתחילים?</h2>
+  <h2>When does it start?</h2>
 
   <div class="time-cards">
     <div class="time-card">
-      <div class="label">קבלת פנים</div>
+      <div class="label">Arrival</div>
       <div class="value">18:30</div>
-      <div class="note">הגעה ושלום לכולם</div>
+      <div class="note">Welcome & gathering</div>
     </div>
     <div class="time-card">
-      <div class="label">הטקס</div>
+      <div class="label">The Ceremony</div>
       <div class="value">19:30</div>
-      <div class="note">שקיעת השמש · זריחת הירח</div>
+      <div class="note">Sunset · Moonrise</div>
     </div>
     <div class="time-card">
-      <div class="label">ריקודים ואש</div>
-      <div class="value">לילה</div>
-      <div class="note">עד שהלב יגיד די 🔥</div>
+      <div class="label">Dancing & Fire</div>
+      <div class="value">Night</div>
+      <div class="note">Until the heart says enough 🔥</div>
     </div>
   </div>
 
   <p style="text-align:center; margin-top:1.8rem; color:#666; font-size:0.97rem;">
-    הטקס יתחיל <strong>בדיוק</strong> ברגע שקיעת השמש וזריחת הירח – 19:30.<br />
-    אנא הגיעו קצת לפני כדי להתמקם ולקבל מקום טוב ✨
+    The ceremony begins <strong>precisely</strong> at sunset and moonrise — 19:30.<br />
+    Please arrive a little early to settle in and find a good spot ✨
   </p>
 
-  <!-- תמונה נוספת -->
   <div class="inline-photo" style="margin-top:2rem;">
-    <img src="images/PXL_20260516_031113942.MP.jpg" alt="שמחון ופרמה" loading="lazy" />
+    <img src="images/PXL_20260516_031113942.MP.jpg" alt="Simhon and Prema" loading="lazy" />
   </div>
 </section>
 
@@ -470,11 +445,11 @@
 <!-- ── DIRECTIONS ── -->
 <section id="directions">
   <span class="section-icon">🗺️</span>
-  <h2>כיצד להגיע?</h2>
+  <h2>How to get there?</h2>
 
   <div class="address-box">
-    <strong>מושב בית אלעזרי</strong><br />
-    בית אלעזרי, 7688500
+    <strong>Moshav Beit Elazari</strong><br />
+    Beit Elazari, 7688500, Israel
   </div>
 
   <div class="nav-buttons">
@@ -490,7 +465,12 @@
     </a>
   </div>
 
-  <!-- מפה משובצת -->
+  <p style="text-align:center; color:#666; font-size:0.92rem;">
+    Enter <strong>Beit Elazari</strong> in Waze / Google Maps.<br />
+    Parking is available within the moshav. Signs will guide you from the entrance.
+  </p>
+
+  <!-- Embedded map -->
   <div style="margin-top:1.5rem; border-radius:12px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2075.8838235542826!2d34.793737978709785!3d31.833371285913472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sil!4v1782119145375!5m2!1sen!2sil"
@@ -498,11 +478,6 @@
       allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
   </div>
-
-  <p style="text-align:center; color:#666; font-size:0.92rem;">
-    היכנסו לכתובת <strong>בית אלעזרי</strong> ב-Waze / Google Maps.<br />
-    ניתן לחנות בשטח המושב. שלטי הכוונה יהיו בכניסה.
-  </p>
 </section>
 
 <hr class="section-divider" />
@@ -510,27 +485,27 @@
 <!-- ── CAMPING ── -->
 <section id="camping">
   <span class="section-icon">⛺</span>
-  <h2>מידע לנשארים ללון בשטח</h2>
+  <h2>Staying overnight?</h2>
 
   <p>
-    מי שמתכנן להישאר ללון בשטח – כל הכבוד ונהדר! אנחנו רוצים לדעת מי מתכוון להישאר
-    כדי שנוכל להתארגן בהתאם. <strong>אנא עדכנו אותנו מראש.</strong>
+    If you're planning to sleep under the stars — wonderful! We'd love to know in advance
+    so we can organize the space accordingly.
+    <strong>Please let us know ahead of time if you plan to stay.</strong>
   </p>
 
-  <p>הכינו מראש:</p>
+  <p>What to bring:</p>
   <ul class="camping-list">
-    <li>אוהל / שק שינה קל מתאים לחום קיץ</li>
-    <li>כרית ומחצלת</li>
-    <li>פנס ראש / פנס אישי</li>
-    <li>מוצרי רחצה אישיים – יש שירותים בשטח</li>
-    <li>תרופות וכל מה שצריך ללילה</li>
-    <li>שינוי בגדים לבוקר</li>
-    <li>מזון ושתייה לבוקר – קפה, לחם, ממרחים</li>
+    <li>Tent / lightweight sleeping bag suitable for summer heat</li>
+    <li>Pillow and sleeping mat</li>
+    <li>Headlamp / personal flashlight</li>
+    <li>Personal toiletries — bathrooms are available on site</li>
+    <li>Any medication or personal items you need for the night</li>
+    <li>Change of clothes for the morning</li>
+    <li>Breakfast supplies — coffee, bread, spreads</li>
   </ul>
 
-  <!-- תמונה אחרונה -->
   <div class="inline-photo" style="margin-top:2rem;">
-    <img src="images/IMG-20250921-WA0003.jpg" alt="יחד" loading="lazy" />
+    <img src="images/IMG-20250921-WA0003.jpg" alt="Together" loading="lazy" />
   </div>
 </section>
 
@@ -540,37 +515,39 @@
 <div class="food-section">
   <section id="food">
     <span class="section-icon">🍽️</span>
-    <h2>שולחן השפע – מה תביאו לחגיגה?</h2>
+    <h2>The Abundance Table – What will you bring?</h2>
 
     <p>
-      החתונה שלנו מבוססת על תרומת הקהילה, ואנחנו מזמינים אתכם לקחת חלק
-      ביצירת שולחן שופע, מגוון ומלא אהבה.
+      Our wedding is rooted in community and sharing, and we invite you to be part of
+      creating a generous, diverse and love-filled table.
     </p>
     <p>
-      אנא בחרו <strong>קטגוריה אחת</strong> והביאו מנה בכמות שתספיק לכ־10–15 סועדים לפחות.
+      Please choose <strong>one category</strong> and bring a dish that serves approximately 10–15 guests.
     </p>
     <p>
-      אם אתם מגיעים כמשפחה ומעוניינים לתרום יותר, נשמח מאוד אם תביאו שתי מנות
-      (מאותה קטגוריה או משתי קטגוריות שונות).
+      If you're coming as a family and would like to contribute more,
+      we'd be delighted if you brought two dishes
+      (from the same or different categories).
     </p>
     <p>
-      כדי שנוכל לשמור על מגוון ואיזון בתפריט, אנא ציינו גם מה בדיוק אתם מתכננים להביא
-      מתוך הקטגוריה שבחרתם (למשל: טאבולה, קיש פטריות, פוקצ'ה, דאל עדשים, עוגת גבינה וכו׳).
+      To help us maintain variety and balance on the menu,
+      please also specify what exactly you're planning to bring within your chosen category
+      (e.g. tabbouleh, mushroom quiche, focaccia, lentil dal, cheesecake, etc.).
     </p>
     <p>
-      נשמח אם תביאו את המנה <strong>בכלי הגשה יפה</strong> 🌿
+      We'd love it if you brought your dish in a <strong>beautiful serving vessel</strong> 🌿
     </p>
     <p style="color:#888; font-size:0.9rem;">
-      הקטגוריות: <strong>סלטים</strong> &nbsp;·&nbsp; <strong>תבשילים</strong> &nbsp;·&nbsp; <strong>קינוחים</strong>
+      Categories: <strong>Salads</strong> &nbsp;·&nbsp; <strong>Hot Dishes</strong> &nbsp;·&nbsp; <strong>Desserts</strong>
     </p>
 
     <div class="food-cta">
       <a class="btn btn-docs"
          href="https://docs.google.com/spreadsheets/d/1Ianb64SymYznpCEiFzxc7Zny0eA3ITl0U01iBK6POy4/edit?usp=sharing"
          target="_blank" rel="noopener">
-        📋 &nbsp; לחצו כאן לרשימת האוכל
+        📋 &nbsp; Click here for the food sign-up list
       </a>
-      <p>פותחים את הקישור → בוחרים פריט → כותבים את שמכם 🙏</p>
+      <p>Open the link → choose an item → write your name 🙏</p>
     </div>
   </section>
 </div>
@@ -580,8 +557,8 @@
 <!-- ── FOOTER ── -->
 <footer>
   <div class="hearts">💛🌕💛</div>
-  <p>פרמה &amp; שמחון &nbsp;|&nbsp; 29 ביולי 2026</p>
-  <p style="margin-top:0.4rem; font-size:0.82rem; opacity:0.7;">Tu BeLove Celebration · מושב בית אלעזרי</p>
+  <p>Prema &amp; Simhon &nbsp;|&nbsp; July 29, 2026</p>
+  <p style="margin-top:0.4rem; font-size:0.82rem; opacity:0.7;">Tu BeLove Celebration · Moshav Beit Elazari</p>
 </footer>
 
 <!-- ── LIGHTBOX ── -->
