@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>פרמה ושמחון – Tu BeLove Celebration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Heebo:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8d5a3;
+      --dark: #1a1208;
+      --cream: #faf6ef;
+      --text: #3d2b10;
+      --divider: #c9a84c44;
+    }
+
+    body {
+      font-family: 'Heebo', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: var(--dark);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('image-invite.jpg');
+      background-size: cover;
+      background-position: center top;
+      opacity: 0.55;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+    }
+
+    .hero-subtitle {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--gold-light);
+      font-size: 1.1rem;
+      letter-spacing: 0.12em;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      color: #fff;
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      line-height: 1.15;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+    }
+
+    .hero h1 span { color: var(--gold-light); }
+
+    .hero-date {
+      margin-top: 1.8rem;
+      font-family: 'Playfair Display', serif;
+      color: var(--gold-light);
+      font-size: 1.35rem;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-scroll {
+      display: none;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem;
+    }
+
+    .section-divider {
+      width: 100%;
+      border: none;
+      border-top: 1px solid var(--divider);
+      position: relative;
+      margin: 0;
+    }
+    .section-divider::before {
+      content: '✦';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--cream);
+      color: var(--gold);
+      padding: 0 1rem;
+      font-size: 1rem;
+    }
+
+    .section-icon {
+      font-size: 2.2rem;
+      display: block;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--dark);
+      text-align: center;
+      margin-bottom: 1.8rem;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 2px;
+      background: var(--gold);
+      margin: 0.6rem auto 0;
+    }
+
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── INLINE PHOTOS ── */
+    .inline-photo {
+      margin: 2rem auto;
+      max-width: 620px;
+      text-align: center;
+    }
+    .inline-photo img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .inline-photo img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.24);
+    }
+
+    /* ── PHOTO STRIP ── */
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      max-height: 320px;
+      overflow: hidden;
+    }
+    .gallery-strip img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+    .gallery-strip img:hover { opacity: 0.88; }
+    @media (max-width: 600px) {
+      .gallery-strip { grid-template-columns: 1fr; max-height: none; }
+      .gallery-strip img { height: 220px; }
+    }
+
+    /* ── DIRECTIONS ── */
+    .nav-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 1.5rem 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: 50px;
+      font-family: 'Heebo', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.18); }
+
+    .btn-google {
+      background: #4285F4;
+      color: #fff;
+    }
+    .btn-waze {
+      background: #33ccff;
+      color: #1a1a2e;
+    }
+    .btn-docs {
+      background: var(--gold);
+      color: var(--dark);
+    }
+
+    .address-box {
+      background: #fff;
+      border: 1px solid var(--divider);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      text-align: center;
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+    .address-box strong { color: var(--dark); }
+
+    /* ── TIME ── */
+    .time-cards {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .time-card {
+      background: #fff;
+      border: 1px solid var(--divider);
+      border-radius: 14px;
+      padding: 1.4rem 2rem;
+      text-align: center;
+      min-width: 170px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .time-card .label {
+      font-size: 0.82rem;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .time-card .value {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--dark);
+      margin-top: 0.2rem;
+    }
+    .time-card .note {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 0.3rem;
+    }
+
+    /* ── CAMPING ── */
+    .camping-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+    .camping-list li {
+      padding: 0.6rem 0;
+      padding-right: 1.8rem;
+      position: relative;
+      border-bottom: 1px solid #e8ddd0;
+    }
+    .camping-list li:last-child { border-bottom: none; }
+    .camping-list li::before {
+      content: '🌿';
+      position: absolute;
+      right: 0;
+      top: 0.6rem;
+    }
+
+    /* ── FOOD ── */
+    .food-section { background: #f7f2ea; }
+    .food-cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .food-cta p {
+      color: #666;
+      font-size: 0.95rem;
+      margin-top: 0.8rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      color: var(--gold-light);
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: 0.9rem;
+    }
+    footer .hearts { font-size: 1.4rem; margin-bottom: 0.5rem; }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 6px; }
+    .lightbox-close {
+      position: absolute;
+      top: 1rem; left: 1rem;
+      color: #fff; font-size: 2rem;
+      cursor: pointer; background: none; border: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-subtitle">Tu BeLove Celebration</p>
+    <h1>פרמה <span>&</span> שמחון</h1>
+    <p class="hero-date">29 ביולי 2026 &nbsp;|&nbsp; ט"ו באב תשפ"ו &nbsp;|&nbsp; מושב בית אלעזרי</p>
+  </div>
+</div>
+
+<!-- ── WELCOME ── -->
+<section id="welcome">
+  <span class="section-icon">🌿</span>
+  <h2>ברוכים הבאים למסיבת טו באב וטקס ההתקדשות של פרמה ושמחון</h2>
+
+  <p style="font-size:1.12rem; text-align:center; line-height:1.9;">
+    אנחנו שמחים ומתרגשים להזמין אתכם – אנשים יקרים, קרובים ללב –
+    לחגוג איתנו את האהבה שלנו, את החיים, ואת הרגע הזה.
+  </p>
+
+  <!-- תמונה ראשונה -->
+  <div class="inline-photo">
+    <img src="images/PXL_20250919_130013649.MP.jpg" alt="פרמה ושמחון" loading="lazy" />
+  </div>
+
+  <p>
+    הערב יתקיים <strong>תחת כיפת השמיים הפתוחה</strong>,
+    ביער של עצי אקליפטוס, זית ואלון עתיקים –
+    מקום שמרגיש כמו אגדה, שקט ועוצמתי.
+    האדמה תחת רגלינו, הכוכבים מעלינו, והאש שתבעיר את הלילה.
+  </p>
+
+  <p>
+    המסיבה היא <strong>פוטלאק</strong> – כל אחד מביא משהו מהלב,
+    ביחד אנחנו יוצרים סעודה של שמחה.
+    יהיה <strong>טקס קידוש לאהבה שלנו</strong>, ואחריו – ריקודים, מעגל נגינה,
+    ברכות ומוסיקה חיה מסביב לאש עד שהלילה יחליט להיגמר.
+  </p>
+
+  <!-- תמונה שנייה -->
+  <div class="inline-photo">
+    <img src="images/PXL_20250919_150347463.MP.jpg" alt="רגעים שלנו" loading="lazy" />
+  </div>
+
+  <p>
+    אנחנו מחכים לחגוג איתכם – לשיר, לרקוד, לאכול, לאהוב ולהיות יחד.
+    הערב הזה שייך לכולנו. 🌕
+  </p>
+</section>
+
+<!-- תמונות אמצע -->
+<div class="gallery-strip">
+  <img src="images/PXL_20251213_072956216.MP.jpg" alt="תמונה 3" loading="lazy" />
+  <img src="images/PXL_20251219_132317859.MP.jpg" alt="תמונה 4" loading="lazy" />
+  <img src="images/PXL_20251219_132321304.MP.jpg" alt="תמונה 5" loading="lazy" />
+</div>
+
+<hr class="section-divider" />
+
+<!-- ── TIMING ── -->
+<section id="timing">
+  <span class="section-icon">🌅</span>
+  <h2>מתי מתחילים?</h2>
+
+  <div class="time-cards">
+    <div class="time-card">
+      <div class="label">קבלת פנים</div>
+      <div class="value">18:30</div>
+      <div class="note">הגעה ושלום לכולם</div>
+    </div>
+    <div class="time-card">
+      <div class="label">הטקס</div>
+      <div class="value">19:30</div>
+      <div class="note">שקיעת השמש · זריחת הירח</div>
+    </div>
+    <div class="time-card">
+      <div class="label">ריקודים ואש</div>
+      <div class="value">לילה</div>
+      <div class="note">עד שהלב יגיד די 🔥</div>
+    </div>
+  </div>
+
+  <p style="text-align:center; margin-top:1.8rem; color:#666; font-size:0.97rem;">
+    הטקס יתחיל <strong>בדיוק</strong> ברגע שקיעת השמש וזריחת הירח – 19:30.<br />
+    אנא הגיעו קצת לפני כדי להתמקם ולקבל מקום טוב ✨
+  </p>
+
+  <!-- תמונה נוספת -->
+  <div class="inline-photo" style="margin-top:2rem;">
+    <img src="images/PXL_20260516_031113942.MP.jpg" alt="שמחון ופרמה" loading="lazy" />
+  </div>
+</section>
+
+<hr class="section-divider" />
+
+<!-- ── DIRECTIONS ── -->
+<section id="directions">
+  <span class="section-icon">🗺️</span>
+  <h2>כיצד להגיע?</h2>
+
+  <div class="address-box">
+    <strong>מושב בית אלעזרי</strong><br />
+    בית אלעזרי, 7688500
+  </div>
+
+  <div class="nav-buttons">
+    <a class="btn btn-google"
+       href="https://www.google.com/maps/dir/?api=1&destination=31.833371,34.793738"
+       target="_blank" rel="noopener">
+      🗺️ &nbsp; Google Maps
+    </a>
+    <a class="btn btn-waze"
+       href="https://waze.com/ul?ll=31.833371,34.793738&navigate=yes"
+       target="_blank" rel="noopener">
+      🚗 &nbsp; Waze
+    </a>
+  </div>
+
+  <!-- מפה משובצת -->
+  <div style="margin-top:1.5rem; border-radius:12px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2075.8838235542826!2d34.793737978709785!3d31.833371285913472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sil!4v1782119145375!5m2!1sen!2sil"
+      width="100%" height="320" style="border:0; display:block;"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <p style="text-align:center; color:#666; font-size:0.92rem;">
+    היכנסו לכתובת <strong>בית אלעזרי</strong> ב-Waze / Google Maps.<br />
+    ניתן לחנות בשטח המושב. שלטי הכוונה יהיו בכניסה.
+  </p>
+</section>
+
+<hr class="section-divider" />
+
+<!-- ── CAMPING ── -->
+<section id="camping">
+  <span class="section-icon">⛺</span>
+  <h2>מידע לנשארים ללון בשטח</h2>
+
+  <p>
+    מי שמתכנן להישאר ללון בשטח – כל הכבוד ונהדר! אנחנו רוצים לדעת מי מתכוון להישאר
+    כדי שנוכל להתארגן בהתאם. <strong>אנא עדכנו אותנו מראש.</strong>
+  </p>
+
+  <p>הכינו מראש:</p>
+  <ul class="camping-list">
+    <li>אוהל / שק שינה קל מתאים לחום קיץ</li>
+    <li>כרית ומחצלת</li>
+    <li>פנס ראש / פנס אישי</li>
+    <li>מוצרי רחצה אישיים – יש שירותים בשטח</li>
+    <li>תרופות וכל מה שצריך ללילה</li>
+    <li>שינוי בגדים לבוקר</li>
+    <li>מזון ושתייה לבוקר – קפה, לחם, ממרחים</li>
+  </ul>
+
+  <!-- תמונה אחרונה -->
+  <div class="inline-photo" style="margin-top:2rem;">
+    <img src="images/IMG-20250921-WA0003.jpg" alt="יחד" loading="lazy" />
+  </div>
+</section>
+
+<hr class="section-divider" />
+
+<!-- ── FOOD ── -->
+<div class="food-section">
+  <section id="food">
+    <span class="section-icon">🍽️</span>
+    <h2>שולחן השפע – מה תביאו לחגיגה?</h2>
+
+    <p>
+      החתונה שלנו מבוססת על תרומת הקהילה, ואנחנו מזמינים אתכם לקחת חלק
+      ביצירת שולחן שופע, מגוון ומלא אהבה.
+    </p>
+    <p>
+      אנא בחרו <strong>קטגוריה אחת</strong> והביאו מנה בכמות שתספיק לכ־10–15 סועדים לפחות.
+    </p>
+    <p>
+      אם אתם מגיעים כמשפחה ומעוניינים לתרום יותר, נשמח מאוד אם תביאו שתי מנות
+      (מאותה קטגוריה או משתי קטגוריות שונות).
+    </p>
+    <p>
+      כדי שנוכל לשמור על מגוון ואיזון בתפריט, אנא ציינו גם מה בדיוק אתם מתכננים להביא
+      מתוך הקטגוריה שבחרתם (למשל: טאבולה, קיש פטריות, פוקצ'ה, דאל עדשים, עוגת גבינה וכו׳).
+    </p>
+    <p>
+      נשמח אם תביאו את המנה <strong>בכלי הגשה יפה</strong> 🌿
+    </p>
+    <p style="color:#888; font-size:0.9rem;">
+      הקטגוריות: <strong>סלטים</strong> &nbsp;·&nbsp; <strong>תבשילים</strong> &nbsp;·&nbsp; <strong>קינוחים</strong>
+    </p>
+
+    <div class="food-cta">
+      <a class="btn btn-docs"
+         href="https://docs.google.com/spreadsheets/d/1Ianb64SymYznpCEiFzxc7Zny0eA3ITl0U01iBK6POy4/edit?usp=sharing"
+         target="_blank" rel="noopener">
+        📋 &nbsp; לחצו כאן לרשימת האוכל
+      </a>
+      <p>פותחים את הקישור → בוחרים פריט → כותבים את שמכם 🙏</p>
+    </div>
+  </section>
+</div>
+
+<hr class="section-divider" />
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="hearts">💛🌕💛</div>
+  <p>פרמה &amp; שמחון &nbsp;|&nbsp; 29 ביולי 2026</p>
+  <p style="margin-top:0.4rem; font-size:0.82rem; opacity:0.7;">Tu BeLove Celebration · מושב בית אלעזרי</p>
+</footer>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="" />
+</div>
+
+<script>
+  document.querySelectorAll('.inline-photo img, .gallery-strip img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').classList.add('open');
+    });
+  });
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+</script>
+</body>
+</html>
